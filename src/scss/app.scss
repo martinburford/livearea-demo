@@ -61,7 +61,7 @@ ul {
 
 nav {
   background-image: linear-gradient(to right, $dust , $linen);
-  border-right: 1px solid $dust;
+  border-right: $border-xxs solid $dust;
   box-sizing: border-box;
   height: 100vh;
   left: 0;
