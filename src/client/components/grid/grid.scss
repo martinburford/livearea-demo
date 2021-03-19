@@ -1,0 +1,105 @@
+@import '../../../scss/variables';
+
+// This CSS grid works on the basis of 3x breakpoints:
+
+// $mobile:  1px - 767px
+// $tablet: 768px - 1023px
+// $desktop: 1024px+
+
+// ... and a 12x column layout
+
+$grid-columns: 12;
+
+@mixin column-calculations($cssProperty) {
+  &-1 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 1));
+  }
+
+  &-2 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 2));
+  }
+
+  &-3 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 3));
+  }
+
+  &-4 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 4));
+  }
+
+  &-5 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 5));
+  }
+
+  &-6 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 6));
+  }
+
+  &-7 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 7));
+  }
+
+  &-8 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 8));
+  }
+
+  &-9 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 9));
+  }
+
+  &-10 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 10));
+  }
+
+  &-11 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 11));
+  }
+  
+  &-12 {
+    #{$cssProperty}: calc(100% / (#{$grid-columns} / 12));
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col {
+  @include column-calculations('width');
+  box-sizing: border-box;
+  display: inline-block;
+
+  &-offset {
+    @include column-calculations('margin-left');
+  }
+
+  &-mobile {
+    @include column-calculations('width');
+
+    &-offset {
+      @include column-calculations('margin-left');
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  @include breakpoint($tablet-landscape-up) {
+    &-tablet {
+      @include column-calculations('width');
+
+      &-offset {
+        @include column-calculations('margin-left');
+      }
+    }
+  }
+
+  @include breakpoint($desktop-up) {
+    &-desktop {
+      @include column-calculations('width');
+
+      &-offset {
+        @include column-calculations('margin-left');
+      }
+    }
+  }
+}

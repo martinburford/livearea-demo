@@ -1,0 +1,101 @@
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import CarouselGraphql from "./";
+import Grid from "../grid";
+import CodeBlock from "../storybook/code-block";
+import Tooltip from "../tooltip/"
+
+import "../storybook/grid/grid.storybook.scss";
+
+<Meta title="Components/Carousel (data via GraphQL)" component={CarouselGraphql} />
+
+# Carousel (data via GraphQL)
+
+The data for this type of carousel is provided via accessing a public GraphQL API from within the component itself, as if it were contained within a "Headless CMS".
+
+## **Component props**
+
+<ArgsTable storyOf={CarouselGraphql} />
+
+### Examples
+
+<Canvas>
+  <Story name="Examples" decorators={[(Story) => (
+    <ApolloProvider client={
+      new ApolloClient({
+        uri: "https://graphql-pokemon2.vercel.app",
+        cache: new InMemoryCache()
+      })
+    }>
+      <div className="storybook grid"><Story /></div>
+    </ApolloProvider>
+  )]}>
+    <CarouselGraphql
+      delay={1500} 
+      name="carousel" 
+      speed="slow" 
+    />
+    <CodeBlock>
+      {`<CarouselGraphql
+  delay={1500} 
+  name="carousel" 
+  speed="slow" 
+/>`}
+    </CodeBlock>
+    <Grid.Row>
+      <Grid.Col span={12}>
+        <Grid.Row>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Slow</h4>
+            <CarouselGraphql
+              compact={true}
+              delay={1500} 
+              name="carousel-graphql-slow" 
+              speed="slow" 
+            />
+            <CodeBlock>
+              {`<CarouselGraphql
+  ...
+  delay={1500} 
+  speed="slow" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Medium</h4>
+            <CarouselGraphql
+              compact={true}
+              delay={500} 
+              name="carousel-graphql-medium" 
+              speed="medium" 
+            />
+            <CodeBlock>
+              {`<CarouselGraphql
+  ...
+  delay={500} 
+  speed="medium" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Fast</h4>
+            <CarouselGraphql
+              compact={true}
+              delay={250} 
+              name="carousel-graphql-fast" 
+              speed="fast" 
+            />
+            <CodeBlock>
+              {`<CarouselGraphql
+  ...
+  delay={250} 
+  speed="fast" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+        </Grid.Row>
+      </Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>

@@ -1,0 +1,97 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  pre code { 
+    font-size: inherit; 
+    word-break: normal; 
+  }
+
+  .sbdocs.sbdocs-wrapper {
+    background: #f7f7fa;
+    padding-top: 30px;
+  }
+
+  .sbdocs.sbdocs-content {
+    max-width: 1540px;
+  }
+
+  #storybook-preview-wrapper {
+    background: #f7f7fa;
+  }
+
+  .sbdocs.sbdocs-preview {
+    margin-top: 0;
+  }
+
+  .sbdocs.sbdocs-preview > div > div {
+    overflow: hidden;
+    padding: 30px 20px 15px;
+  }
+
+  .sbdocs.sbdocs-preview > div > div + div {
+    display: none;
+  }
+
+  .sbdocs.sbdocs-preview .innerZoomElementWrapper > div {
+    border: 0 !important;
+  }
+
+  .sbdocs.sbdocs-preview .innerZoomElementWrapper .row {
+    padding-bottom: 15px;
+  }
+
+  .sbdocs.sbdocs-h2 {
+    padding-bottom: 10px;
+  }
+
+  .sbdocs.sbdocs-h3 {
+    margin-bottom: 20px;
+  }
+
+  .sbdocs.sbdocs-h4 {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .sbdocs[class*='sbdocs-h'] strong {
+    font-weight: 400;
+  }
+
+  .sbdocs.sbdocs-li code,
+  .sbdocs.sbdocs-p code {
+    border: 0 !important; /* important is required due to these styles being compiled via storybook css modules */
+    color: #c00000 !important; /* important is required due to these styles being compiled via storybook css modules */
+    font-family: courier;
+    padding: 0;
+  }
+
+  .sbdocs strong {
+    font-weight: 700;
+  }
+
+  [data-selector='storybook-asset'] {
+    display: block;
+    width: 100%;
+  }
+
+  .sbdocs [data-form-item] {
+    margin-top: 0;
+  }
+
+  .sbdocs .language-jsx * {
+    font-family: courier !important; /* important is required as it needs to overwrite syntax highlighting specificities */
+    font-size: 0.95em;
+  }
+
+  [data-component='true'] {
+    margin-top: 0 !important;
+  }
+
+  .block-colour-container {
+    background: #efede8;
+  }
+</style>

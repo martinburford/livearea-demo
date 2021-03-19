@@ -1,0 +1,199 @@
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import Carousel from "./";
+import Grid from "../grid";
+import CodeBlock from "../storybook/code-block";
+import Tooltip from "../tooltip/"
+
+import "../storybook/grid/grid.storybook.scss";
+
+<Meta title="Components/Carousel (data via props)" component={Carousel} />
+
+# Carousel (data via props)
+
+The data for this type of carousel is provided straight into the component as a prop.
+
+## **Component props**
+
+<ArgsTable storyOf={Carousel} />
+
+### Examples
+
+<Canvas>
+  <Story name="Examples" decorators={[(Story) => <div className="storybook grid"><Story /></div>]}>
+    <Carousel
+      data={{
+        pokemons: [{
+          classification: "Martin classification",
+          image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+          name: "Martin Burford",
+          resistant: ["Martin resistant 1", "Martin resistant 2"],
+          types: ["Martin type 1", "Martin type 2"],
+          weaknesses: ["Martin weakness 1", "Martin weakness 2"]
+        },{
+          classification: "Sean classification",
+          image: "https://img.pokemondb.net/artwork/ivysaur.jpg",
+          name: "Sean Farrington",
+          resistant: ["Sean resistant 1", "Sean resistant 2"],
+          types: ["Sean type 1", "Sean type 2"],
+          weaknesses: ["Sean weakness 1", "Sean weakness 2"]
+        },{
+          classification: "Richard classification",
+          image: "https://img.pokemondb.net/artwork/venusaur.jpg",
+          name: "Richard Matthias",
+          resistant: ["Richard resistant 1", "Richard resistant 2"],
+          types: ["Richard type 1", "Richard type 2"],
+          weaknesses: ["Richard weakness 1", "Richard weakness 2"]
+        }]
+      }}
+      delay={1500} 
+      name="carousel" 
+      speed="slow" 
+    />
+    <CodeBlock>
+      {`<Carousel
+  data={{
+    pokemons: [{
+      classification: "Martin classification",
+      image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+      name: "Martin Burford",
+      resistant: ["Martin resistant 1", "Martin resistant 2"],
+      types: ["Martin type 1", "Martin type 2"],
+      weaknesses: ["Martin weakness 1", "Martin weakness 2"]
+    },{
+      ...
+    }]
+  }}
+  delay={1500} 
+  name="carousel" 
+  speed="slow" 
+/>`}
+    </CodeBlock>
+    <Grid.Row>
+      <Grid.Col span={12}>
+        <Grid.Row>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Slow</h4>
+            <Carousel
+              compact={true}
+              data={{
+                pokemons: [{
+                  classification: "Martin classification",
+                  image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+                  name: "Martin Burford",
+                  resistant: ["Martin resistant 1", "Martin resistant 2"],
+                  types: ["Martin type 1", "Martin type 2"],
+                  weaknesses: ["Martin weakness 1", "Martin weakness 2"]
+                },{
+                  classification: "Sean classification",
+                  image: "https://img.pokemondb.net/artwork/ivysaur.jpg",
+                  name: "Sean Farrington",
+                  resistant: ["Sean resistant 1", "Sean resistant 2"],
+                  types: ["Sean type 1", "Sean type 2"],
+                  weaknesses: ["Sean weakness 1", "Sean weakness 2"]
+                },{
+                  classification: "Richard classification",
+                  image: "https://img.pokemondb.net/artwork/venusaur.jpg",
+                  name: "Richard Matthias",
+                  resistant: ["Richard resistant 1", "Richard resistant 2"],
+                  types: ["Richard type 1", "Richard type 2"],
+                  weaknesses: ["Richard weakness 1", "Richard weakness 2"]
+                }]
+              }}
+              delay={1500} 
+              name="carousel-slow" 
+              speed="slow" 
+            />
+            <CodeBlock>
+              {`<Carousel
+  ...
+  delay={1500} 
+  speed="slow" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Medium</h4>
+            <Carousel
+              compact={true}
+              data={{
+                pokemons: [{
+                  classification: "Martin classification",
+                  image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+                  name: "Martin Burford",
+                  resistant: ["Martin resistant 1", "Martin resistant 2"],
+                  types: ["Martin type 1", "Martin type 2"],
+                  weaknesses: ["Martin weakness 1", "Martin weakness 2"]
+                },{
+                  classification: "Sean classification",
+                  image: "https://img.pokemondb.net/artwork/ivysaur.jpg",
+                  name: "Sean Farrington",
+                  resistant: ["Sean resistant 1", "Sean resistant 2"],
+                  types: ["Sean type 1", "Sean type 2"],
+                  weaknesses: ["Sean weakness 1", "Sean weakness 2"]
+                },{
+                  classification: "Richard classification",
+                  image: "https://img.pokemondb.net/artwork/venusaur.jpg",
+                  name: "Richard Matthias",
+                  resistant: ["Richard resistant 1", "Richard resistant 2"],
+                  types: ["Richard type 1", "Richard type 2"],
+                  weaknesses: ["Richard weakness 1", "Richard weakness 2"]
+                }]
+              }}
+              delay={500} 
+              name="carousel-medium" 
+              speed="medium" 
+            />
+            <CodeBlock>
+              {`<Carousel
+  ...
+  delay={500} 
+  speed="medium" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+          <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{span: 4}}>  
+            <h4 className="sbdocs sbdocs-h4">Fast</h4>
+            <Carousel
+              compact={true}
+              data={{
+                pokemons: [{
+                  classification: "Martin classification",
+                  image: "https://img.pokemondb.net/artwork/bulbasaur.jpg",
+                  name: "Martin Burford",
+                  resistant: ["Martin resistant 1", "Martin resistant 2"],
+                  types: ["Martin type 1", "Martin type 2"],
+                  weaknesses: ["Martin weakness 1", "Martin weakness 2"]
+                },{
+                  classification: "Sean classification",
+                  image: "https://img.pokemondb.net/artwork/ivysaur.jpg",
+                  name: "Sean Farrington",
+                  resistant: ["Sean resistant 1", "Sean resistant 2"],
+                  types: ["Sean type 1", "Sean type 2"],
+                  weaknesses: ["Sean weakness 1", "Sean weakness 2"]
+                },{
+                  classification: "Richard classification",
+                  image: "https://img.pokemondb.net/artwork/venusaur.jpg",
+                  name: "Richard Matthias",
+                  resistant: ["Richard resistant 1", "Richard resistant 2"],
+                  types: ["Richard type 1", "Richard type 2"],
+                  weaknesses: ["Richard weakness 1", "Richard weakness 2"]
+                }]
+              }}
+              delay={250} 
+              name="carousel-fast" 
+              speed="fast" 
+            />
+            <CodeBlock>
+              {`<Carousel
+  ...
+  delay={250} 
+  speed="fast" 
+/>`}
+            </CodeBlock>
+          </Grid.Col>
+        </Grid.Row>
+      </Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>

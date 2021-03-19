@@ -1,0 +1,35 @@
+@import './variables';
+
+// Global
+
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Component gutter
+%component-gutter {
+  margin-top: $spacing-m;
+
+  @include breakpoint($desktop-up) {
+    margin-top: $spacing-l;
+  }
+}
+
+// Component padding
+%component-padding {
+  box-sizing: border-box;
+  padding: $spacing-m;
+
+  @include breakpoint($desktop-up) {
+    padding: $spacing-l;
+  }
+}
+
+// Debug
+%debug-collapse-list {
+  > * {
+    font-size: 0.9em;
+  }
+}

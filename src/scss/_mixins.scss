@@ -1,0 +1,18 @@
+// Add a box shadow to an element
+// @mixin box-shadow
+// @param {number} $horizontal - The horizontal offset of the shadow
+// @param {number} $vertical - The vertical offset of the shadow
+// @param {number} $blur - The blur radius of the shadow
+// @param {string} $color - The hex / rgba of the shadow
+@mixin box-shadow($horizontal, $vertical, $blur, $color) {
+  box-shadow: $horizontal $vertical $blur $color;
+}
+
+// Set a gradient, blending from left to right
+// @mixin gradient-left-to-right
+// @param {string} $leftHex - The hex code of the start gradient colour
+// @param {string} $rightHex - The hex code of the end gradient colour
+@mixin gradient-left-to-right($leftHex, $rightHex) {
+  background-color: $leftHex;
+  background-image: linear-gradient(to right, $leftHex, $rightHex);
+}

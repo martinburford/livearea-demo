@@ -1,0 +1,20 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+// Custom breakpoints
+$mobile-only: 1px 549px;
+$mobile-up: 1px;
+$tablet-only: 550px 1023px;
+$tablet-portrait-only: 550px 767px;
+$tablet-portrait-down: 1px 767px;
+$tablet-portrait-up: 550px;
+$tablet-landscape-only: 768px 1023px;
+$tablet-landscape-down: 1px 1023px;
+$tablet-landscape-up: 768px;
+$desktop-only: 1024px 1439px;
+$desktop-down: 1px 1439px;
+$desktop-up: 1024px;
+$widescreen-only: 1440px 9999px;
+$desktop-down: 1px 9999px;
+$widescreen-up: 1440px;
+$debug-bars-up: 1920px;
+$wide-debug-bars-up: 3840px;

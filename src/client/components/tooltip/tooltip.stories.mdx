@@ -1,0 +1,61 @@
+import { ArgsTable, Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import Tooltip from "./";
+import CodeBlock from "../storybook/code-block";
+
+<Meta title="Components/Tooltip" component={Tooltip} />
+
+# Tooltip
+
+There are a number of tooltip components included throughout the site, used to provide further information to users.
+
+## **Component props**
+
+<ArgsTable storyOf={Tooltip} />
+
+## Examples
+
+### **Default**
+
+<Canvas>
+  <Story name="Default">
+    <Tooltip style="default">
+      Default tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Tooltip>
+    <CodeBlock>
+      {`<Tooltip style="default">
+  Default tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Tooltip>`}
+    </CodeBlock>
+  </Story>
+</Canvas>
+
+### **Error**
+
+<Canvas>
+  <Story name="Error">
+    <Tooltip style="error">
+      Error tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Tooltip>
+    <CodeBlock>
+      {`<Tooltip style="error">
+  Error tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Tooltip>`}
+    </CodeBlock>
+  </Story>
+</Canvas>
+
+### **Success**
+
+<Canvas>
+  <Story name="Success">
+    <Tooltip style="success">
+      Success tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Tooltip>
+    <CodeBlock>
+      {`<Tooltip style="success">
+  Success tooltip ... lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</Tooltip>`}
+    </CodeBlock>
+  </Story>
+</Canvas>

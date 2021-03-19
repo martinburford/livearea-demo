@@ -1,0 +1,30 @@
+@import '../../../../scss/variables';
+
+$grid-columns: 100;
+
+.storybook {
+  .row {
+    &:not(:first-of-type) {
+      margin-top: 5px;
+    }
+  }
+
+  .col {
+    box-shadow: 1px 0 0 0 darken($linen, 5%),  0 1px 0 0 darken($linen, 5%),  1px 1px 0 0 darken($linen, 5%), 1px 0 0 0 darken($linen, 5%) inset,  0 1px 0 0 darken($linen, 5%) inset;
+    box-sizing: border-box;
+    padding: $spacing-xs;
+
+    @for $i from 1 through $grid-columns {
+      &:nth-child(#{$i}) {
+        background: lighten($linen, 4%) !important;
+      }
+    }
+  }
+
+  &.grid {
+    .row {
+      background: $dust;
+      text-align: center;
+    }
+  }
+}

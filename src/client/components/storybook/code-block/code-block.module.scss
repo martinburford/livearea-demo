@@ -1,0 +1,33 @@
+@import '../../../../scss/mixins';
+@import '../../../../scss/variables';
+
+// !important is used in this stylesheet as <SyntaxHighlighter> applies inline styles via JavaScript. Specificity overrides are therefore required within this file
+
+.code-block {
+  margin-top: $spacing-m;
+
+  &.no-margins {
+    margin-top: 0;
+  }
+}
+
+.heading {
+  font-weight: 700;
+}
+
+.code {  
+  * {
+    font-family: monospace !important;
+    font-size: 12px !important;
+  }
+
+  pre {
+    @include box-shadow(0, 0, $shadow-xs, $stone);
+    background: darken($linen, 2%) !important;
+    border-radius: $radius-m;
+  }
+
+  code {
+    background: none !important;
+  }
+}

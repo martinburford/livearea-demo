@@ -1,0 +1,26 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+.tooltip {
+  border-left-style: solid;
+  border-left-width: $border-xl;
+  border-radius: $radius-m;
+  box-sizing: border-box;
+  padding: $spacing-m;
+
+  &.style-default {
+    background: $linen;
+    border-left-color: $sea;
+    color: $fossil;
+  }
+
+  &.style-error {
+    background: rgba($red, 0.15);
+    border-left-color: $red;
+  }
+
+  &.style-success {
+    background: rgba($green, 0.15);
+    border-left-color: $green;
+  }
+}

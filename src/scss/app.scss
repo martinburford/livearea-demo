@@ -1,0 +1,86 @@
+@import './placeholders';
+@import './reset';
+@import './variables';
+
+$navigation-width: 225px;
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.5em;
+}
+
+body {
+  color: $fossil;
+  font-size: 14px;
+  -webkit-text-size-adjust: none; // This fixes an iOS Safari bug when scaling websites. Some relatively sized elements weren't scaling as expected
+}
+
+.livearea-logo {
+  background: $stone;
+  box-sizing: border-box;
+  margin: -#{$spacing-m} 0 0 -#{$spacing-m};
+  padding: $spacing-m;
+  width: calc(100% + #{$spacing-m * 2});
+}
+
+h3 {
+  margin: $spacing-m 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+[data-clickable] {
+  cursor: pointer;
+}
+
+[data-hidden] {
+  display: none;
+}
+
+[data-no-margins] {
+  margin: 0;
+}
+
+[data-inline-block] {
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+nav {
+  background-image: linear-gradient(to right, $dust , $linen);
+  border-right: 1px solid $dust;
+  box-sizing: border-box;
+  height: 100vh;
+  left: 0;
+  padding: $spacing-m;
+  position: fixed;
+  top: 0;
+  width: $navigation-width;
+
+  strong {
+    font-size: 1.4em;
+  }
+}
+
+main {
+  background: lighten($linen, 5%);
+  box-sizing: border-box;
+  left: $navigation-width;
+  min-height: 100%;
+  padding: $spacing-m;
+  position: absolute;
+  width: calc(100% - #{$navigation-width});
+}

@@ -1,0 +1,269 @@
+import { ArgsTable, Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import Grid from "./";
+import CodeBlock from "../storybook/code-block";
+
+import "../storybook/grid/grid.storybook.scss";
+
+<Meta title="Global/Grid" />
+
+# Grid
+
+The `<Grid />` component works in a slightly different way to all other components, in as much it as has 2 exports, `<Col>` and `<Row>`. Whilst a `<Row>` acts merely as a containing element, each `<Col>` can receive its own props (as below):
+
+### **Component props**
+
+| Name           | Description                                                 | Default | Values                                                                                                               |
+|----------------|-------------------------------------------------------------|:-------:|----------------------------------------------------------------------------------------------------------------------|
+| mobile.span    | How many columns to span within the mobile breakpoint       | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| mobile.offset  | How many columns to offset by within the mobile breakpoint  | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| span           | How many columns to span a column (on a fixed % basis)      | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| offset         | How many columns to offset by (on a fixed % basis)          | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| tablet.span    | How many columns to span within the tablet breakpoint       | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| tablet.offset  | How many columns to offset by within the tablet breakpoint  | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| desktop.span   | How many columns to span within the desktop breakpoint      | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+| desktop.offset | How many columns to offset by within the desktop breakpoint | -       | <code>1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 10 &#124; 11 &#124; 12</code> |
+
+## Examples
+
+### **Fixed columns**
+
+<Canvas>
+  <Story name="Fixed columns" decorators={[(Story) => <div className="storybook grid"><Story /></div>]}>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+      <Grid.Col span="1">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="2">Column</Grid.Col>
+      <Grid.Col span="2">Column</Grid.Col>
+      <Grid.Col span="2">Column</Grid.Col>
+      <Grid.Col span="2">Column</Grid.Col>
+      <Grid.Col span="2">Column</Grid.Col>
+      <Grid.Col span="2">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="3">Column</Grid.Col>
+      <Grid.Col span="3">Column</Grid.Col>
+      <Grid.Col span="3">Column</Grid.Col>
+      <Grid.Col span="3">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="4">Column</Grid.Col>
+      <Grid.Col span="4">Column</Grid.Col>
+      <Grid.Col span="4">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="6">Column</Grid.Col>
+      <Grid.Col span="6">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col span="12">Column</Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>
+
+<CodeBlock>
+  {`<Grid.Row>
+  <Grid.Col span="...">Column</Grid.Col>
+  ...
+</Grid.Row>`}
+</CodeBlock>
+
+<br />
+
+### **Responsive layout**
+
+<Canvas>
+  <Story name="Responsive layout" decorators={[(Story) => <div className="storybook grid"><Story /></div>]}>
+    <Grid.Row>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>
+
+<CodeBlock>
+  {`<Grid.Row>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 6}} desktop={{span: 4}}>Column</Grid.Col>
+</Grid.Row>`}
+</CodeBlock>
+
+<br />
+
+### **Offsets (fixed)**
+
+<Canvas>
+  <Story name="Offsets (fixed)" decorators={[(Story) => <div className="storybook grid"><Story /></div>]}>
+    <Grid.Row>
+      <Grid.Col offset="5" span="2">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col offset="4" span="4">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col offset="3" span="6">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col offset="2" span="8">Column</Grid.Col>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Col offset="1" span="10">Column</Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>
+
+<CodeBlock>
+  {`<Grid.Row>
+  <Grid.Col offset="5" span="2">Column</Grid.Col>
+</Grid.Row>
+<Grid.Row>
+  <Grid.Col offset="4" span="4">Column</Grid.Col>
+</Grid.Row>
+<Grid.Row>
+  <Grid.Col offset="3" span="6">Column</Grid.Col>
+</Grid.Row>
+<Grid.Row>
+  <Grid.Col offset="2" span="8">Column</Grid.Col>
+</Grid.Row>
+<Grid.Row>
+  <Grid.Col offset="1" span="10">Column</Grid.Col>
+</Grid.Row>`}
+</CodeBlock>
+
+<br />
+
+### **Offsets (responsive)**
+
+<Canvas withSource="none">
+  <Story name="Offsets (responsive)" decorators={[(Story) => <div className="storybook grid"><Story /></div>]}>
+    <Grid.Row>
+      <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{offset: 3, span: 6}}>Column</Grid.Col>
+    </Grid.Row>
+  </Story>
+</Canvas>
+
+<CodeBlock>
+  {`<Grid.Row>
+  <Grid.Col mobile={{span: 12}} tablet={{span: 12}} desktop={{offset: 3, span: 6}}>Column</Grid.Col>
+</Grid.Row>`}
+</CodeBlock>

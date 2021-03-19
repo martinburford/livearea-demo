@@ -1,0 +1,159 @@
+@import '../../../scss/mixins';
+@import '../../../scss/variables';
+
+$blue: #395ea9;
+$gutter: 50px;
+$image-size: 200px;
+$yellow: #ffcb05;
+
+.carousel {
+  border: 2px solid #ccc;
+  margin: 0 auto;
+
+  &.compact {
+    .details {
+      left: 0;
+      max-width: 100%;
+      overflow: visible;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      h2 {
+        box-sizing: border-box;
+        display: block;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding: 20px 10px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      em {
+        left: 10px;
+        width: 20px;
+      }
+
+      ul {
+        display: none;
+      }
+    }
+
+    .character {
+      margin: 0 auto;
+      width: 125px;
+    }
+
+    .logo {
+      left: calc(50% - 50px);
+      width: 100px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  > div {
+    height: 400px;
+    overflow: hidden;
+  
+    > div {
+      background-color: $blue;
+      background-image: linear-gradient($blue, lighten($blue, 20%));
+      width: 100%;
+
+      h2 {
+        color: #fff;
+      }
+    
+      &:nth-child(odd) {
+        background-color: $yellow;
+        background-image: linear-gradient($yellow, lighten($yellow, 20%));
+
+        h2 {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  ul {
+    background: rgba(#ffffff, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+
+    li {
+      border-bottom: 1px solid rgba(#ffffff, 0.3);
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 3px 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:first-child {
+        border-top: 1px solid rgba(#ffffff, 0.3);
+      }
+    }
+
+    strong {
+      display: inline-block;
+      text-transform: capitalize;
+      width: 120px;
+    }
+
+    span {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.pokemon {
+  align-items: center;
+  display: flex;
+  height: 400px;
+  position: relative;
+
+  em {
+    background: rgba(#fff, 0.5);
+    border-radius: 10px;
+    color: #c00000;
+    font-size: 1.4em;
+    font-style: normal;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  div {
+    box-sizing: border-box;
+    max-width: calc(100% - #{$image-size} - #{$gutter*3} - 12px); // 12px is the 5px gutter of the character image side + 1px border each side
+  }
+
+  .character {
+    border: 1px solid #efefef;
+    margin: 50px;
+    padding: 5px;
+    width: $image-size;
+  }
+}
+
+.logo {
+  bottom: 20px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+}
+
+

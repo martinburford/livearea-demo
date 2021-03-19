@@ -1,0 +1,7 @@
+// Generate a random background-color hex, with alpha channel
+// @function random-hex
+// @param {number} $opacity - The opacity to use for the hex
+// @returns {color} - The RGBA color in return
+@function random-hex($opacity: 0.25) {
+  @return rgba(random(255), random(255), random(255), $opacity);
+}
