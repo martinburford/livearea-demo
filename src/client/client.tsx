@@ -10,6 +10,7 @@ const client = new ApolloClient({
 });
 
 // Components
+import BigCommerceApiRest from "./components/big-commerce/api-rest";
 import Carousel from "./components/carousel";
 import CarouselGraphql from "./components/carousel-graphql";
 import Grid from "./components/grid";
@@ -50,17 +51,24 @@ ReactDOM.render(
         <img className="livearea-logo" src="https://www.liveareacx.com/wp-content/uploads/2018/03/LiveArea_logo_wht.png" />
         <ul>
           <li>
+            <strong>Big Commerce</strong>
+            <ol>
+              <li><Link to="/livearea-demo/big-commerce/api-rest">API (Rest)</Link></li>
+            </ol>
+          </li>
+          <li>
             <strong>Carousel</strong>
             <ol>
-              <li><Link to="/livearea-demo/carousel">Data via props</Link></li>
-              <li><Link to="/livearea-demo/carousel-graphql">GraphQL</Link></li>
+              <li><Link to="/livearea-demo/carousel/data-via-props">Data via props</Link></li>
+              <li><Link to="/livearea-demo/carousel/graphql">GraphQL</Link></li>
             </ol>
           </li>
         </ul>
       </nav>
       <main>
         <Switch>
-          <Route exact={true} path="/livearea-demo/carousel" component={() => {
+          <Route exact={true} path="/livearea-demo/big-commerce/api-rest" component={BigCommerceApiRest} />
+          <Route exact={true} path="/livearea-demo/carousel/data-via-props" component={() => {
             return (
               <>
                 <h1>Carousel &gt; data via props</h1>
@@ -89,7 +97,7 @@ ReactDOM.render(
               </>
             )
           }} />
-          <Route exact={true} path="/livearea-demo/carousel-graphql" component={() => {
+          <Route exact={true} path="/livearea-demo/carousel/graphql" component={() => {
             return (
               <>
                 <h1>Carousel &gt; GraphQL</h1>

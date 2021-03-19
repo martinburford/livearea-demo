@@ -70,8 +70,14 @@ nav {
   top: 0;
   width: $navigation-width;
 
+  ul > li {
+    margin-top: $spacing-m;
+  }
+
   strong {
-    font-size: 1.4em;
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: $spacing-xxs;
   }
 }
 
