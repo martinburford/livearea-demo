@@ -52,16 +52,15 @@ ReactDOM.render(
           <li>
             <strong>Carousel</strong>
             <ol>
-              <li><Link to="/carousel">Data via props</Link></li>
-              <li><Link to="/carousel-graphql">GraphQL</Link></li>
+              <li><Link to="/livearea-demo/carousel">Data via props</Link></li>
+              <li><Link to="/livearea-demo/carousel-graphql">GraphQL</Link></li>
             </ol>
           </li>
         </ul>
       </nav>
       <main>
         <Switch>
-          <Route exact={true} path="/" component={() => <p>Please select an item from the navigation</p>} />
-          <Route exact={true} path="/carousel" component={() => {
+          <Route exact={true} path="/livearea-demo/carousel" component={() => {
             return (
               <>
                 <h1>Carousel &gt; data via props</h1>
@@ -90,7 +89,7 @@ ReactDOM.render(
               </>
             )
           }} />
-          <Route exact={true} path="/carousel-graphql" component={() => {
+          <Route exact={true} path="/livearea-demo/carousel-graphql" component={() => {
             return (
               <>
                 <h1>Carousel &gt; GraphQL</h1>
@@ -119,6 +118,7 @@ ReactDOM.render(
               </>
             )
           }} />
+          <Route path="/" component={() => <p>Please select an item from the navigation</p>} />
         </Switch>
       </main>
     </BrowserRouter>
